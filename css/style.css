@@ -27,6 +27,14 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: Arial, Verdana, sans-serif;
+  line-height: 2em;
+  text-align: center;
+}
+
 h3 {
   line-height: 1.25em;
   font-weight: normal;
