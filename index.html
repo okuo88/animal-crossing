@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 15px;
+        font-family: Arial;
+      }
+
+      /* The grid: Four equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 30%;
+        height: 500px;
+        padding: 30px;
+      }
+
+      /* Style the images inside the grid */
+      .column img {
+        opacity: 0.85;
+        cursor: pointer;
+      }
+
+      .column img:hover {
+        opacity: 1;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* The expanding image container */
+      .container {
+        position: relative;
+        display: none;
+      }
+
+      /* Expanding image text */
+      #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: black;
+        font-size: 20px;
+      }
+
+      /* Closable button inside the expanded image */
+      .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: black;
+        font-size: 35px;
+        cursor: pointer;
+      }
+    </style>
+
+    <style>
+      a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: blue;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align:center">
+      <a href="https://www.facebook.com/groups/3059273590806738"
+        ><h2>動物森友旅人代購團</h2></a
+      >
+      <p>日本任天堂正版原裝進口 / 只接受銀行轉帳 ∙ PayPal ∙ 信用卡 (2.9％)</p>
+    </div>
+
+    <!-- The four columns -->
+    <div class="row">
+      <div class="column">
+        <img
+          src="./images/1-1.jpg"
+          alt="tote bag"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <a href="1.html"
+          ><p><b>#1 Dodo Airlines 環保購物袋 Set (NT$1,500)</b></p></a
+        >
+      </div>
+      <div class="column">
+        <img
+          src="./images/2.jpg"
+          alt="fan"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#2 預購限量動森套扇 (NT$1,500)</b></p>
+      </div>
+
+      <div class="column">
+        <img
+          src="./images/3.jpg"
+          alt="cushion"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#3 Timmy 葉形坐墊 (NT$2,500)</b></p>
+      </div>
+
+      <div class="column">
+        <img
+          src="./images/4.jpg"
+          alt="tote bag"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#4 預購限量動森購物袋 (NT$1,700)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/5-1.jpg"
+          alt="Spoon and Fork Set"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <a href="2.html">
+          <p><b>#5 預購限量動森隨身餐具 (NT$1,200)</b></p></a
+        >
+      </div>
+      <div class="column">
+        <img
+          src="./images/6.jpg"
+          alt="table"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#6 預購限量動森小桌子 (NT$3,700)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/7.jpg"
+          alt="Tissue Case"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#7 預購狸貓衛生紙盒套 (NT$2,500)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/8.jpg"
+          alt="bento box"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#8 動森便當盒附筷子 (NT$2,000)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/9.jpg"
+          alt="clock"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#9 西施惠桌上型電子鐘 (NT$3,700)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/10.jpg"
+          alt="coffee"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#10 烹煮咖啡 Set (NT$3,700)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/11.jpg"
+          alt="handkerchief"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#11 東京限量動森手帕 36.5 x 45.5cm (NT$1,000)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/12.jpg"
+          alt="file"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#12 預購限量動森A4資料夾 (NT$250)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/13.jpg"
+          alt="file"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#13 預購限量動森A4資料夾 (NT$250)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/14.jpg"
+          alt="handkerchief"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#14 預購限量動森手帕 25 x 25cm (NT$500)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/15.jpg"
+          alt="keychain"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#15 預購限量動森皮製鑰匙圈 (NT$800)</b></p>
+      </div>
+
+      <div class="column">
+        <img
+          src="./images/16.jpg"
+          alt="bowls"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#16 貍克西施惠碗組 (NT$1,650)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/17.jpg"
+          alt="cushion"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#17 Tommy 蘋果坐墊 (NT$2,500)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/18.jpg"
+          alt="teapot"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#18 動森可愛貝殼茶壺 (NT$3,900)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/19-1.jpg"
+          alt="hat"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <a href="3.html"
+          ><p><b>#19 預購限量Nook雙面帽 (NT$2,000)</b></p></a
+        >
+      </div>
+      <div class="column">
+        <img
+          src="./images/20.jpg"
+          alt="tote bag"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#20 預購限量動森購物袋 (NT$2,000)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/21.jpg"
+          alt="Apron"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#21 Timmy & Tommy 圍裙 (NT$2,200)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/22.jpg"
+          alt="Switch Stand"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#22 任天堂動森Switch架 (NT$1,250)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/23.jpg"
+          alt="Switch Stand"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#23 任天堂動森超薄保護殼 (NT$1,250)</b></p>
+      </div>
+      <div class="column">
+        <img
+          src="./images/24.jpg"
+          alt="tote bag"
+          style="width:100%"
+          onclick="myFunction(this);"
+        />
+        <p><b>#24 東京限量動森便當袋 (NT$1,250)</b></p>
+      </div>
+    </div>
+    <p>
+      ⚠️ 付款後才會下單 只接受換貨不接受退款 ⚠️ 限量商品8月才會推出 因疫情
+      運輸會比較慢 請大家耐心等待 如有疑問請臉書私訊我
+    </p>
+
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn"
+        >&times;</span
+      >
+      <img id="expandedImg" style="width:100%" />
+      <div id="imgtext"></div>
+    </div>
+
+    <script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
